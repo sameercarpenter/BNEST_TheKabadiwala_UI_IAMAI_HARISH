@@ -1,0 +1,9 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = Localizer.Text("Home page");
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Localizer.Text("Welcome") @ViewBag.Name</h1>
+</div>

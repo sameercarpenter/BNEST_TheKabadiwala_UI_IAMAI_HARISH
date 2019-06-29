@@ -1,0 +1,29 @@
+﻿@page
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.Extensions.Options
+@model UAWebApplication.Pages.SignUpModel
+@inject IOptions<RequestLocalizationOptions> LocOps
+<h1>@Localizer.Text("Sign Up")</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email"></span>
+    </div> <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password"></span>
+    </div> @*<div class="form-group">
+        <label asp-for="ConfirmPassword" class="control-label"></label>
+        <input asp-for="ConfirmPassword" class="form-control" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>*@ 
+    <div class="form-group">
+        <button class="btn btn-primary">@Localizer.Text("Sign Up")</button>
+    </div>
+</form>
